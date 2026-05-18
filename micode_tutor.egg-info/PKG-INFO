@@ -227,6 +227,7 @@ mic backend ollama-create \
 
 mic backend ollama-test --model gemma4:latest
 ```
+(Certainly,we support llama.cpp backend)
 
 This supports offline or USB-delivered model artifacts.
 
@@ -458,4 +459,4 @@ If you use MICode Tutor, please cite:
 ```text
 MICode Tutor: Offline Codebase Memory for Gemma 4.
 Built for the Google DeepMind Gemma 4 Good Hackathon, 2026.
-```
+```# MICode-Tutor

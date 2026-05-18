@@ -92,17 +92,21 @@ def generate_ollama(prompt: str, model: str = "gemma4:latest", timeout: int = 90
 
 
 def generate_llamacpp(prompt: str, timeout: int = 900) -> str:
-    url = "http://localhost:8080/completion"
+    """
+    llama.cpp backend through llama-server OpenAI-compatible chat endpoint.
+    Assumes llama-server is running on http://localhost:8080.
+    """
+    url = "http://localhost:8080/v1/chat/completions"
     payload = {
-        "prompt": prompt,
-        "n_predict": 512,
+        "model": "gemma4",
+        "messages": [{"role": "user", "content": prompt}],
         "temperature": 0.2,
-        "stop": ["</s>", "User:", "Question:"],
+        "max_tokens": 512,
     }
     r = requests.post(url, json=payload, timeout=timeout)
     r.raise_for_status()
-    return r.json().get("content", "").strip()
-
+    data = r.json()
+    return data["choices"][0]["message"]["content"].strip()
 
 def generate_openai_compatible(prompt: str, model: str = "gemma4", timeout: int = 900) -> str:
     url = "http://localhost:8080/v1/chat/completions"
