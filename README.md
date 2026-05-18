@@ -452,3 +452,13 @@ If you use MICode Tutor, please cite:
 MICode Tutor: Offline Codebase Memory for Gemma 4.
 Built for the Google DeepMind Gemma 4 Good Hackathon, 2026.
 ```# MICode-Tutor
+
+## Research Lineage: Machine-Interpretable Information
+
+MICode Tutor is an applied engineering step toward a broader research idea: **Machine-Interpretable Information (MII)**.
+
+The core hypothesis is that documents and codebases should not be treated as disposable prompt text. They should be compiled into persistent, machine-interpretable memory artifacts before AI agents reason over them.
+
+For this hackathon prototype, `.mic` is an inspectable symbolic-textual code memory artifact. It does not require hidden `.mii` neural states. Future versions may explore richer neural protocol states, but v0.1 is intentionally transparent, local, and auditable.
+
+See [docs/MII_RELATION.md](docs/MII_RELATION.md) for more.
