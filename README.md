@@ -216,6 +216,7 @@ mic backend ollama-create \
 
 mic backend ollama-test --model gemma4:latest
 ```
+(Certainly,we support llama.cpp backend)
 
 This supports offline or USB-delivered model artifacts.
 
