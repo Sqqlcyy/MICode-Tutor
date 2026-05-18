@@ -235,12 +235,15 @@ This supports offline or USB-delivered model artifacts.
 
 llama.cpp is a lower-level GGUF inference runtime suitable for resource-constrained environments.
 
-```bash
-mic backend llamacpp-build
 
-mic backend llamacpp-start \
-  --gguf /path/to/gemma4-e4b-q4_k_m.gguf
-```
+### Guided Runtime Setup
+
+MICode Tutor includes a guided backend setup layer:
+
+```bash
+mic backend install llamacpp
+mic backend llamacpp-start --gguf /path/to/model.gguf
+mic backend llamacpp-test
 
 Then:
 
