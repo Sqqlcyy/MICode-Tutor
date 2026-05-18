@@ -1,0 +1,19 @@
+[project]
+name = "micode-tutor"
+version = "0.1.0"
+description = "Offline codebase memory for Gemma 4"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "typer>=0.12.0",
+    "rich>=13.0.0",
+    "pydantic>=2.0.0",
+    "requests>=2.31.0"
+]
+
+[project.scripts]
+mic = "mic.cli:app"
+
+[build-system]
+requires = ["setuptools>=68.0.0", "wheel"]
+build-backend = "setuptools.build_meta"

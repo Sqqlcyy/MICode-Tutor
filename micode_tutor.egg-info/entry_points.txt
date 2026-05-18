@@ -1,0 +1,2 @@
+[console_scripts]
+mic = mic.cli:app
